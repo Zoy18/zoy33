@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>イベント処理(複数ボタン)</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Lucky Slot Machine</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<h1>イベント処理(複数ボタン)</h1>
-<p id="message">メッセージがここに表示されます</p>
-<button id="redBtn">赤ボタン</button>
-<button id="blueBtn">青ボタン</button>
-<script src="script.js"></script>
+    <div class="slot-machine">
+        <h1>Lucky Slots</h1>
+        <div class="info-panel">
+            <span id="balance-display">Coins: 100</span>
+        </div>
+
+        <div class="reels">
+            <div class="reel" id="reel1">🎰</div>
+            <div class="reel" id="reel2">🎰</div>
+            <div class="reel" id="reel3">🎰</div>
+        </div>
+
+        <button id="spin-btn">SPIN!</button>
+
+        <div id="message-area" class="instructions">
+            Press SPIN to start! 3 of a kind wins!
+        </div>
+    </div>
+
+    <div id="winner-screen" class="hidden">
+        <h2 id="win-text">BIG WIN!</h2>
+        <button onclick="closeWinner()">Next Game</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
