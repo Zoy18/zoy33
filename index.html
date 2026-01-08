@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lucky Slot Machine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Dice Roller</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="slot-machine">
-        <h1>Lucky Slots</h1>
-        <div class="info-panel">
-            <span id="balance-display">Coins: 100</span>
+    <div class="game-container">
+        <h1>Double Dice Roller</h1>
+        
+        <div class="dice-wrapper">
+            <div id="dice1" class="dice">1</div>
+            <div id="dice2" class="dice">1</div>
         </div>
 
-        <div class="reels">
-            <div class="reel" id="reel1">🎰</div>
-            <div class="reel" id="reel2">🎰</div>
-            <div class="reel" id="reel3">🎰</div>
-        </div>
-
-        <button id="spin-btn">SPIN!</button>
-
-        <div id="message-area" class="instructions">
-            Press SPIN to start! 3 of a kind wins!
+        <button id="roll-btn" class="launch-button">Roll Dice ➔</button>
+        
+        <div class="result-display">
+            <p id="status">Click to roll!</p>
+            <h2 id="total">Total: --</h2>
         </div>
     </div>
-
-    <div id="winner-screen" class="hidden">
-        <h2 id="win-text">BIG WIN!</h2>
-        <button onclick="closeWinner()">Next Game</button>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
